@@ -8,8 +8,8 @@ import os
 # You can change below variables w.r.t you input & output directory paths : 
 #   Prostate task has modularity of 2, 
 #   so two files for inference should be added in inputs
-inputs_dir = "./inputs"
-outputs_dir = "./outputs" # prediction results will be saved to outputs dir
+inputs_dir = "./request_inputs"
+outputs_dir = "./request_outputs" # prediction results will be saved to outputs dir
 endpoint = 'https://nnunet-model-04131301522792.eastus2.inference.ml.azure.com/score' # check from azure endpoints tab
 # Variables end here
 
