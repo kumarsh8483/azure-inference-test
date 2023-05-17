@@ -1,11 +1,17 @@
+# python client for sending nnunet inference requests to online/local endpoints
+
 import requests
 import json
 import base64
 import os
 
-#parameters
-inputs_dir = "inputs"
-outputs_dir = "outputs"
+# You can change below variables w.r.t you input & output directory paths : 
+#   Prostate task has modularity of 2, 
+#   so two files for inference should be added in inputs
+inputs_dir = "./inputs"
+outputs_dir = "./outputs" # prediction results will be saved to outputs dir
+endpoint = 'https://nnunet-model-04131301522792.eastus2.inference.ml.azure.com/score' # check from azure endpoints tab
+# Variables end here
 
 input_files = {}
 open_files = []
@@ -15,7 +21,7 @@ for fname in os.listdir(inputs_dir):
     open_files.append(f)
     input_files[fname]=f
     
-r = requests.post('https://nnunet-model-04131301522792.eastus2.inference.ml.azure.com/score', files=input_files)   
+r = requests.post(endpoint, files=input_files)   
 
 for f in open_files:
     f.close()
@@ -27,6 +33,6 @@ print(data)
 for fname, content in data['result_files'].items():
     # convert string to bytes
     binary = base64.b64decode(content.encode("utf-8"))
-    #write bytes to a file 
+    # write bytes to a file 
     with open(os.path.join(outputs_dir, fname), "wb") as f:
         f.write(binary)
