@@ -18,11 +18,11 @@ test-codes for azure nnunet pipeline inference
    
 7. Move to server directory
 
-       cd azure-inference-test
+       cd server
 
 8. Start inference server
 
-       azmlinfsrv --entry_script azure-inference-test/score.py
+       azmlinfsrv --entry_script score.py
 
 Now your scoring is deployed locally, running at 127.0.0.1:5001
 
