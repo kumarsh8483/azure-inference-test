@@ -1,7 +1,10 @@
 # azure-inference-test
 test-codes for azure nnunet pipeline inference
 
-# how it works?
+## how it works?
+
+Quick note : Workflow tested with python 3.10.6
+
 1. Clone this repository
 
        git clone https://github.com/tekmen0/azure-inference-test.git
@@ -15,12 +18,16 @@ test-codes for azure nnunet pipeline inference
 6. Install the inference test server
    
        python -m pip install azureml-inference-server-http
+
+7. Install requirements.
+
+       pip3 install requirements.txt 
    
-7. Move to server directory
+8. Move to server directory
 
        cd server
 
-8. Start inference server
+9. Start inference server
 
        azmlinfsrv --entry_script score.py
 
