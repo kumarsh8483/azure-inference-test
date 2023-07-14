@@ -13,7 +13,7 @@ test-codes for azure nnunet pipeline inference
 
        docker run -v $(pwd):/app nnunet_local_inference_env
 
-Note : If you are running from docker dekstop, don't forget to mount project root directory to /app directory
+Note : If you are running from docker desktop, don't forget to mount project root directory to /app directory
 
 ### Deployment with bare python environment :
 
