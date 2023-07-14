@@ -83,6 +83,7 @@ def run(request):
     inputs_dir = os.path.join(inputs_root, random_unique_id)
     outputs_dir = os.path.join(outputs_root, random_unique_id)
 
+
     if request.method == 'POST':
         # save request data as a file here
         files = request.files
