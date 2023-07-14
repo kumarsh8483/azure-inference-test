@@ -3,6 +3,14 @@ test-codes for azure nnunet pipeline inference
 
 ## how it works?
 
+### Deployment with docker file :
+
+1. Build dockerfile
+
+       docker build -t nnunet_local_inference_env .
+
+### Deployment with bare python environment :
+
 Quick note : Workflow tested with python 3.10.6
 
 1. Clone this repository
