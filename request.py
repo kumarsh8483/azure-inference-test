@@ -27,8 +27,6 @@ for f in open_files:
     f.close()
 
 data = json.loads(r.text)
-#print(data)
-
 
 for fname, content in data['result_files'].items():
     # convert string to bytes

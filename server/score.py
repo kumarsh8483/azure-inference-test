@@ -112,7 +112,6 @@ def run(request):
         #shutil.rmtree(outputs_dir)
 
         # return results
-        # print(results_encoded)
         return {'result_files': results_encoded}
     else:
         return AMLResponse("Bad request, use POST", 500)
