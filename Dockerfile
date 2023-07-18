@@ -10,4 +10,4 @@ RUN pip3 install -r requirements.txt
 
 WORKDIR /app/server
 
-CMD ["azmlinfsrv", "--entry_script", "score.py"]
+ENTRYPOINT ["azmlinfsrv", "--entry_script", "score.py"]

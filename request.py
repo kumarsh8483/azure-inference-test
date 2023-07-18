@@ -10,7 +10,7 @@ import os
 #   so two files for inference should be added in inputs
 inputs_dir = "./request_inputs"
 outputs_dir = "./request_outputs" # prediction results will be saved to outputs dir
-endpoint = 'https://nnunet-model-04131301522792.eastus2.inference.ml.azure.com/score' # check from azure endpoints tab
+endpoint = 'http://127.0.0.1:5001/score' # check from azure endpoints tab
 # Variables end here
 
 input_files = {}
@@ -27,7 +27,7 @@ for f in open_files:
     f.close()
 
 data = json.loads(r.text)
-print(data)
+#print(data)
 
 
 for fname, content in data['result_files'].items():
@@ -36,3 +36,5 @@ for fname, content in data['result_files'].items():
     # write bytes to a file 
     with open(os.path.join(outputs_dir, fname), "wb") as f:
         f.write(binary)
+        
+print(f"Inference finished, check {outputs_dir} for outputs")
