@@ -11,7 +11,7 @@ test-codes for azure nnunet pipeline inference
 
 2. Run dockerfile
 
-       docker run -v $(pwd):/app nnunet_local_inference_env
+       docker run -v ${pwd}:/app -p 5001:5001 nnunet_local_inference_env
 
 Note : If you are running from docker desktop, don't forget to mount project root directory to /app directory
 
