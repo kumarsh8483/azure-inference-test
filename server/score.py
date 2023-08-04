@@ -14,8 +14,8 @@ from nnunet.inference.predict import predict_from_folder
 from nnunet.paths import default_plans_identifier, default_cascade_trainer, default_trainer
 from nnunet.utilities.task_name_id_conversion import convert_id_to_task_name
 
-inputs_root = "inputs"
-outputs_root = "outputs"
+inputs_root = "./inputs"
+outputs_root = "./outputs"
 task_name_cfg = "Task005_Prostate" #default_plans_identifier
 
 def make_prediction(input_folder, output_folder):
